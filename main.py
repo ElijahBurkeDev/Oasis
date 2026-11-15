@@ -156,8 +156,9 @@ def chat_loop(module: ModuleType, backend: Any) -> None:
     title = getattr(backend, "name", module.__name__)
 
     print("\n" + "=" * 60)
-    print(f"Harness ready - backend: {title}")
+    print(f"Welcome to Oasis")
     print("=" * 60)
+    time.sleep(1)
     print_help(backend)
     on_ready = getattr(backend, "on_ready", None)  # optional startup hook (e.g. a mood chart)
     if callable(on_ready):
